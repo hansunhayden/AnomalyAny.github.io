@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="CUT: A Controllable, Universal, and Training-Free Visual Anomaly Generation Framework">
+        content="Anomaly Anything: Promptable Unseen Visual Anomaly Generation">
   <meta name="keywords" content="CUT">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,7 +11,7 @@
   <meta http-equiv='expires' content='0'> 
   <meta http-equiv='pragma' content='no-cache'>
   
-  <title>CUT: A Controllable, Universal, and Training-Free Visual Anomaly Generation Framework</title>
+  <title>Anomaly Anything: Promptable Unseen Visual Anomaly Generation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -96,13 +96,16 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <!--TITLE-->
-          <h1 class="title is-1 publication-title">CUT: A Controllable, Universal, and Training-Free Visual Anomaly Generation Framework</h1>
+          <h1 class="title is-1 publication-title">Anomaly Anything: Promptable Unseen Visual Anomaly Generation</h1>
           <div class="is-size-5 publication-authors">
             <!--AUTHORS-->
             <span class="author-block">
-              <a href="https://people.epfl.ch/han.sun?lang=en">Han Sun</a><sup>1</sup>,</span>
+              <a href="https://hansunhayden.github.io/">Han Sun</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://caoyunkang.github.io/">Yunkang Cao</a><sup>2</sup>,</span>
+            <span class="author-block">
+            <span class="author-block">
+              <a href="https://sites.google.com/view/dong-hao/">Hao Dong</a><sup>3</sup>,</span>
             <span class="author-block">
               <a href="https://people.epfl.ch/olga.fink?lang=en">Olga Fink</a><sup>1</sup>,
             </span>
@@ -111,6 +114,7 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>EPFL,</span>
             <span class="author-block"><sup>2</sup>HUST</span>
+            <span class="author-block"><sup>3</sup>ETH Zurich</span>
           </div>
 
           <div class="column has-text-centered">
@@ -126,12 +130,12 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2406.01078"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <!-- Video Link.
@@ -146,12 +150,21 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/EPFL-IMOS/AnomalyAny"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (coming soon)</span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/EPFL-IMOS/AnomalyAny"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <image src="static/images/img.png"></image>
+                  </span>
+                  <span>Demo (comming soon)</span>
                   </a>
               </span>
               <!-- Dataset Link.
@@ -185,21 +198,33 @@
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="./static/images/capsule.png" style="width:100%">
-          <div class="text">Capsule</div>
+          <div class="numbertext">1 / 5</div>
+          <img src="./static/images/screw.png" style="width:100%">
+<!--          <div class="text">Capsule</div>-->
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="./static/images/candle.png" style="width:100%">
-          <div class="text">Candle</div>
+          <div class="numbertext">2 / 5</div>
+          <img src="./static/images/leather.png" style="width:100%">
+<!--          <div class="text">Candle</div>-->
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="./static/images/bowl.png" style="width:100%">
-          <div class="text">Bowl</div>
+          <div class="numbertext">3 / 5</div>
+          <img src="static/images/bowl.png" style="width:100%">
+<!--          <div class="text">Bowl</div>-->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="static/images/vase.png" style="width:100%">
+<!--          <div class="text">Bowl</div>-->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="static/images/phone.png" style="width:100%">
+<!--          <div class="text">Bowl</div>-->
         </div>
 
         <!-- Next and previous buttons -->
@@ -216,7 +241,7 @@
       </div> -->
 
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">CUT</span> achieves universal anomaly generation on any object types and anomaly types.
+        <span class="dnerf">AnomalyAny</span> achieves universal anomaly generation on any object types and anomaly types.
       </h2>
     </div>
   </div>
@@ -288,9 +313,17 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Visual anomaly detection (AD) inherently faces significant challenges due to the scarcity of anomalous data. Although numerous works have been proposed to synthesize anomalous samples, the generated samples often lack authenticity or can only reflect the distribution of the available training data samples. In this work, we propose CUT: a Controllable, Universal and Training-free visual anomaly generation framework, which leverages the capability of Stable Diffusion (SD) in image generation to generate diverse and realistic anomalies. With CUT, we achieve controllable and realistic anomaly generation universally across both unseen data and novel anomaly types, using a single model without acquiring additional training effort. To demonstrate the effectiveness of our approach, we propose a Vision-Language-based Anomaly Detection framework (VLAD). By training the VLAD model with our generated anomalous samples, we achieve state-of-the-art performance on several benchmark anomaly detection tasks, highlighting the significant improvements enabled by our synthetic data.
-          </p>
+<p>Visual anomaly detection (AD) presents significant challenges due to the scarcity of anomalous data samples.
+While numerous works have been proposed to synthesize anomalous samples, these synthetic anomalies often lack authenticity or require extensive training data, limiting their applicability in real-world scenarios.
+
+In this work, we propose <strong>Anomaly Anything</strong> (AnomalyAny), a novel framework that leverages Stable Diffusion (SD)'s image generation capabilities to generate diverse and realistic unseen anomalies.
+By conditioning on a single normal sample during test time, AnomalyAny is able to generate unseen anomalies for arbitrary object types with text descriptions.
+
+Within AnomalyAny, we propose attention-guided anomaly optimization to direct SD’s attention on generating hard anomaly concepts.
+Additionally, we introduce prompt-guided anomaly refinement, incorporating detailed descriptions to further improve the generation quality.
+
+Extensive experiments on MVTec AD and VisA datasets demonstrate AnomalyAny's ability in generating high-quality unseen anomalies and its effectiveness in enhancing downstream AD performance.</p>
+
         </div>
       </div>
     </div>
@@ -308,14 +341,22 @@
     </div> -->
     <!--/ Paper video. -->
   <!-- </div> -->
-</section>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{
-}</code></pre>
+    <pre><code>
+      @misc{sun2024unseenvisualanomalygeneration,
+      title={Unseen Visual Anomaly Generation},
+      author={Han Sun and Yunkang Cao and Hao Dong and Olga Fink},
+      year={2024},
+      eprint={2406.01078},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2406.01078},
+}
+    </code></pre>
   </div>
 </section>
 
